@@ -7,14 +7,14 @@ var mysql = require("./dbcon.js");
 var handlebars = require("express-handlebars").create(defaultLayout:"Main"));
 
 app.engine("handlebars", handlebars.engine);
-app.set("view-engine"), "handlebars");
+app.set("view-engine", "handlebars");
 app.set("port", 3000);
 
 var session = require("express-session");
 app.use(session({secret:"superSecretPassword"}));
 
 app.get("/", function(req, res,next){
-	
+	res.render("home");
 }
 
 app.get("/count", function(req,res){
@@ -45,7 +45,7 @@ app.get('/create-session-table',function(req,res,next){
     "loggedIn BOOLEAN," +
     "LoginDateTime DATE)";
     mysql.pool.query(createString, function(err){
-      context.results = "Create Sessions Table";
+      context.results = "Table Created!";
       res.render('home',context);
     })
   });
