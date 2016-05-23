@@ -1,0 +1,23 @@
+{
+  "name": "CS290",
+  "version": "1.0.0",
+  "description": "Putting all of CS290 together.",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:courtneysfoster/CS290.git"
+  },
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Courtney Foster",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.13.3",
+    "express": "^4.13.2",
+    "express-handlebars": "^3.0.0",
+    "express-session": "^1.11.3",
+    "handlebars": "^4.0.5",
+    "mysql": "^2.8.0"
+  }
+}

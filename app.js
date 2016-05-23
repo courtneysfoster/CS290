@@ -2,9 +2,9 @@
 var express = require("express");
 var app = express();
 
-var mysql = require("./dbcon.js");
+var mysql = require("./SQLdbConnection.js");
 
-var handlebars = require("express-handlebars").create(defaultLayout:"Main"));
+var handlebars = require('express-handlebars').create({defaultLayout:'main'});
 
 app.engine("handlebars", handlebars.engine);
 app.set("view-engine", "handlebars");
@@ -15,7 +15,7 @@ app.use(session({secret:"superSecretPassword"}));
 
 app.get("/", function(req, res,next){
 	res.render("home");
-}
+});
 
 app.get("/count", function(req,res){
 	var context = {};
